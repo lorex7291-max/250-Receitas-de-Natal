@@ -1,0 +1,6 @@
+{
+  "name": "200 Receitas de Natal – A Grande Enciclopédia da Ceia Perfeita",
+  "description": "200 receitas de Natal completas: entradas, pratos principais, sobremesas e bebidas. Acesso imediato pelo WhatsApp após a confirmação do pagamento.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
