@@ -17,8 +17,12 @@ import {
 } from 'lucide-react';
 import {
   ANA_AVATAR,
+  BONUS_1_IMG,
+  BONUS_2_IMG,
+  BONUS_3_IMG,
   CARLA_AVATAR,
   FERNANDA_AVATAR,
+  HERO_EBOOK_IMG,
   JULIANA_AVATAR,
 } from './avatars';
 
@@ -262,10 +266,10 @@ export default function App() {
           </p>
           <div className="book-wrap">
             <img
-              src="/assets/ebook-250.webp"
+              src={HERO_EBOOK_IMG}
               alt="Mockup do E-book 250 Receitas de Natal"
-              width={640}
-              height={400}
+              width={720}
+              height={441}
               fetchPriority="high"
               decoding="sync"
             />
@@ -475,21 +479,21 @@ export default function App() {
                   '🥗 Guia da Ceia Fitness de Natal',
                   'Receitas leves, saudáveis e deliciosas para preparar uma ceia natalina completa, equilibrada e cheia de sabor, sem abrir mão da tradição.',
                   '29,90',
-                  '/assets/bonus-1-fitness.webp',
+                  BONUS_1_IMG,
                 ],
                 [
                   'BÔNUS 2',
                   '🎀 Decoração e Mesa de Natal',
                   'Ideias simples de cores, arranjos e montagem de mesa para encantar seus convidados.',
                   '24,90',
-                  '/assets/bonus-2-decoracao.webp',
+                  BONUS_2_IMG,
                 ],
                 [
                   'BÔNUS 3',
                   '🍗 Mini Livro da Ceia Econômica',
                   '10 cardápios natalinos completos, testados e deliciosos por menos de R$ 150.',
                   '19,90',
-                  '/assets/bonus-3-economica.webp',
+                  BONUS_3_IMG,
                 ],
               ] as const
             ).map(([badge, title, desc, oldPrice, imgSrc]) => (
@@ -501,10 +505,9 @@ export default function App() {
                   <img
                     src={imgSrc}
                     alt={title}
-                    width={312}
-                    height={392}
-                    fetchPriority="low"
-                    decoding="async"
+                    width={240}
+                    height={302}
+                    decoding="sync"
                   />
                 </div>
                 <h3>{title}</h3>
@@ -685,8 +688,13 @@ export default function App() {
             </div>
 
             <a
-              href="#ofertas"
-              onClick={() => setPromoPrice(null)}
+              href={
+                promoPrice === '13,82'
+                  ? 'https://pay.wiapy.com/AZ_cnEfbj8jd'
+                  : 'https://pay.wiapy.com/cLDXtzPqiNF0'
+              }
+              target="_blank"
+              rel="noopener noreferrer"
               className="buy promo-cta"
             >
               🎄 QUERO A EDIÇÃO PREMIUM POR R$ {promoPrice}
@@ -694,8 +702,9 @@ export default function App() {
 
             {promoPrice === '13,82' && (
               <a
-                href="#ofertas"
-                onClick={() => setPromoPrice(null)}
+                href="https://pay.wiapy.com/gdm-tyNnWKHc"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="promo-skip"
               >
                 Não, obrigado. Quero continuar apenas com a oferta básica sem bônus por R$ 12,00
