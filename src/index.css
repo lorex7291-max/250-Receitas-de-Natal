@@ -243,21 +243,21 @@ button {
 }
 
 .book-wrap {
-  width: min(416px, 90%);
-  margin: auto;
+  width: min(540px, 98%);
+  margin: 4px auto 8px;
   position: relative;
   z-index: 2;
-  border-radius: 16px;
-  box-shadow: 0 0 18px 12px var(--cream);
+  background: transparent;
 }
 
 .book-wrap img {
-  object-fit: cover;
-  border: 2px solid var(--gold);
+  object-fit: contain;
+  background: transparent;
+  border: 0;
   width: 100%;
-  height: 256px;
-  box-shadow: var(--shadow);
-  border-radius: 16px;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  filter: drop-shadow(0 16px 26px oklch(20% 0.03 35 / 0.26));
   display: block;
 }
 
@@ -535,7 +535,7 @@ section h2 {
 .recipe-track {
   display: flex;
   width: max-content;
-  animation: recipe-marquee 38s linear infinite;
+  animation: recipe-marquee 50s linear infinite;
 }
 
 .recipe-carousel:hover .recipe-track {
@@ -543,36 +543,23 @@ section h2 {
 }
 
 .recipe-track article {
-  border: 1px solid var(--line);
+  border: 1.5px solid var(--gold);
   background: var(--paper);
-  width: 245px;
-  min-height: 270px;
-  margin-right: 24px;
+  width: 295px;
+  margin-right: 22px;
   flex-shrink: 0;
   box-shadow: var(--shadow);
-  text-align: center;
   border-radius: 14px;
   overflow: hidden;
-  padding-bottom: 14px;
+  padding: 0;
 }
 
 .recipe-track img {
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
-  height: 186px;
+  height: auto;
+  aspect-ratio: 520 / 735;
   display: block;
-}
-
-.recipe-track h3 {
-  color: oklch(50% 0.05 145);
-  min-height: 48px;
-  margin: 16px 12px 2px;
-  font-size: 15px;
-}
-
-.recipe-track b {
-  color: var(--green);
-  font-size: 13px;
 }
 
 .more {
@@ -1382,13 +1369,10 @@ footer p {
     font-size: 14px;
   }
   .book-wrap {
-    width: min(285px, 100% - 4px);
+    width: min(360px, 100%);
   }
   .book-wrap img {
-    height: 170px;
-  }
-  .book-wrap > span {
-    right: 0;
+    height: auto;
   }
   .hero-price strong {
     font-size: 52px;
@@ -1421,15 +1405,11 @@ footer p {
     font-size: 12px;
   }
   .recipe-track article {
-    width: 195px;
-    min-height: 230px;
+    width: 255px;
     margin-right: 16px;
   }
   .recipe-track img {
-    height: 135px;
-  }
-  .recipe-track h3 {
-    font-size: 13px;
+    height: auto;
   }
   .bonus-grid,
   .price-grid {

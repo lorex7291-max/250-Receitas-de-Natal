@@ -29,21 +29,14 @@ import {
 const MARIA_AVATAR =
   'data:image/webp;base64,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';
 
-const RECIPES: [string, string, string][] = [
-  ['Peru Assado com Ervas', '350 calorias', '/assets/peru-BE_0udlc.webp'],
-  ['Tender de Natal com Abacaxi', '280 calorias', '/assets/tender-BVKAARxz.webp'],
-  ['Rabanada Especial de Natal', '220 calorias', '/assets/rabanada-ClG0yOWC.webp'],
-  ['Panettone Caseiro Tradicional', '245 calorias', '/assets/panettone-DxiM5q9k.webp'],
-  ['Chester Glaceado com Mel', '320 calorias', '/assets/chester-DlTM4BNV.webp'],
-  ['Farofa Natalina Completa', '180 calorias', '/assets/farofa-9v0BTy9y.webp'],
-  ['Bacalhau à Portuguesa', '265 calorias', '/assets/bacalhau-DRgMljjI.webp'],
-  ['Arroz de Natal com Frutas', '195 calorias', '/assets/arroz-DMA0lgdr.webp'],
-  ['Pavê de Chocolate Cremoso', '310 calorias', '/assets/pave-CyVlOzFU.webp'],
-  ['Torta de Nozes e Castanhas', '285 calorias', '/assets/torta-Dcsg9zkF.webp'],
-  ['Salada de Frutas Tropicais', '120 calorias', '/assets/salada-Ch_TZCNX.webp'],
-  ['Bolo Rei Português', '230 calorias', '/assets/bolo-sjsIzYvd.webp'],
-  ['Ponche de Frutas Natalino', '145 calorias', '/assets/ponche-BRRVJuk6.webp'],
-  ['Cookies de Gengibre de Natal', '165 calorias', '/assets/cookies-D2H6NO9l.webp'],
+const RECIPES: [string, string][] = [
+  ['Receita 01 – Peru Natalino Recheado', '/assets/receita-01.webp'],
+  ['Receita 02 – Chester Assado com Ervas e Laranja', '/assets/receita-02.webp'],
+  ['Receita 03 – Lombo Suíno ao Molho de Laranja', '/assets/receita-03.webp'],
+  ['Receita 05 – Salpicão Natalino Especial', '/assets/receita-05.webp'],
+  ['Receita 06 – Arroz Festivo com Amêndoas e Passas', '/assets/receita-06.webp'],
+  ['Receita 07 – Rabanada Assada com Canela', '/assets/receita-07.webp'],
+  ['Receita 08 – Pavê de Chocolate e Morango', '/assets/receita-08.webp'],
 ];
 
 const FAQS: [string, string][] = [
@@ -208,7 +201,7 @@ function PriceCard({
         <em>Pagamento Único</em>
       </div>
       <button type="button" onClick={onBuyClick} className="buy w-full">
-        COMPRAR AGORA
+        ADQUIRIR RECEITAS AGORA
       </button>
       <div className="trust">
         <span>
@@ -267,13 +260,12 @@ export default function App() {
           <div className="book-wrap">
             <img
               src={HERO_EBOOK_IMG}
-              alt="Mockup do E-book 250 Receitas de Natal"
-              width={720}
-              height={441}
+              alt="Mockup 3D do E-book 250 Receitas de Natal"
+              width={900}
+              height={600}
               fetchPriority="high"
               decoding="sync"
             />
-            <span>🎄 ESPECIAL NATAL</span>
           </div>
           <div className="hero-price">
             <span>⭐ Oferta Especial de Natal</span>
@@ -425,14 +417,14 @@ export default function App() {
 
       <section className="recipes">
         <div className="wide">
-          <h2>Veja Algumas das 250 Receitas de Natal:</h2>
+          <h2>VEJA ALGUMA DAS 250 RECEITAS DE NATAL QUE VOCE VAI RECEBER</h2>
           <p>
             250 Receitas Especiais para Transformar Seu Natal em uma Celebração
             Inesquecível!
           </p>
           <div className="recipe-carousel">
             <div className="recipe-track">
-              {[...RECIPES, ...RECIPES].map(([title, calories, imgSrc], idx) => (
+              {[...RECIPES, ...RECIPES].map(([title, imgSrc], idx) => (
                 <article
                   key={`${title}-${idx}`}
                   aria-hidden={idx >= RECIPES.length ? 'true' : undefined}
@@ -440,13 +432,11 @@ export default function App() {
                   <img
                     src={imgSrc}
                     alt={title}
-                    width={368}
-                    height={280}
+                    width={520}
+                    height={735}
                     fetchPriority="low"
                     decoding="async"
                   />
-                  <h3>{title}</h3>
-                  <b>🎄 {calories}</b>
                 </article>
               ))}
             </div>
